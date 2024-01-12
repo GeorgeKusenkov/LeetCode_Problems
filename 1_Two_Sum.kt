@@ -11,9 +11,11 @@ class Solution {
         for (i in nums.indices) {
             val current = nums[i]
             val x = target - current
-            println(map.toString())
-            if (map.contains(x)) return intArrayOf(map[x]!!, i)
-            map[current] = i
+            if (map.contains(x)) {
+                return intArrayOf(map[x]!!, i)
+            } else {
+                map[current] = i
+            }
         }
         return intArrayOf()
     }
